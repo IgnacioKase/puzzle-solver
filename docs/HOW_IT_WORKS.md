@@ -6,6 +6,10 @@ The key advantage is having the reference artwork. A fragment of a distinctive b
 
 This document separates what the current code implements from possible future improvements. The diagrams use Mermaid, which GitHub can render directly.
 
+![The three input types: loose pieces, the photographed puzzle state, and box artwork](assets/source-photos.jpg)
+
+The photographs above illustrate the three inputs. Full-resolution sources are available in the [photo collection](../images/README.md). The board photograph records the original analysis state, not subsequent assembly progress.
+
 ## 1. The system at a glance
 
 ```mermaid
@@ -127,6 +131,10 @@ flowchart TD
 
 The mask is slightly eroded before artwork comparison. Removing a narrow border reduces the influence of paper, shadows, and imperfect segmentation around the edge. The full outline is retained for display and later geometric checks.
 
+![Actual artwork, binary mask, and extracted outline for piece B-a4](assets/piece-representations.png)
+
+All three representations above come from the same photographed piece. The binary mask retains the solid interior; the outline records its perimeter.
+
 ## 5. Matching artwork to the box image
 
 Each piece has an unknown position, rotation, and scale. In simplified form, a point on the piece is mapped into the reference as:
@@ -243,6 +251,8 @@ Neighbor suggestions use the proximity of transformed contours and a low-overlap
 
 The saved result contains **109 high-confidence suggestions, 19 medium-confidence suggestions, and 19 unresolved entries**, out of 147 entries. The approximately 74% high-confidence figure is **coverage of photographed entries**, not measured placement accuracy or percentage of the entire puzzle solved.
 
+**Feedback from actual assembly:** the owner reports successfully placing roughly half of the suggested pieces, but also questions the original five-piece “start here” group. That group has been withdrawn as the featured example. This feedback is useful evidence that many suggestions work, but it is not a per-piece accuracy evaluation; the exact successful IDs and the incorrect member or join in the old group have not been identified.
+
 ## 9. Why direct pairwise shape matching is harder
 
 Two neighboring pieces do not have identical silhouettes. Their adjoining boundary segments are complementary, with the solid interiors on opposite sides of the seam.
@@ -319,20 +329,37 @@ Marking a piece complete also does not rerun matching or modify the current-boar
 | `scripts/dense.py` | Coarse search using masked artwork correlation |
 | `scripts/refine.py` | Local refinement and gap-coverage assessment |
 | `scripts/publish.py` | Confidence classification, overlap reporting, neighbors, and guide data |
-| `scripts/starter.py` | Five-piece starter illustration |
+| `scripts/illustrate.py` | Source-photo, piece-representation, and upper-left example figures |
+| `scripts/starter.py` | Compatibility entry point for regenerating the featured example |
+| `scripts/sanitize_photos.py` | Metadata-free export copies with decoded-pixel verification |
 | `output/index.html` | Interactive viewer and browser-local progress |
 | `output/guide-data.json` | Published placements and confidence labels |
 
 These paths identify files in the local implementation. The documentation can be read independently of the code, source photographs, and generated guide.
 
-For a concrete example, the proposed starter group has the following arrangement:
+## 13. A visual example from the upper-left gap
+
+The small gap near the upper-left corner is useful for explaining the method because the surrounding assembled edges are visible. Two candidate placements, **A-g5** and **B-a4**, predict the following arrangement:
 
 ```mermaid
-flowchart TD
-    LeftPiece[A-d5] ---|left of| TopPiece[A-b7]
-    TopPiece ---|above| BranchPiece[C-b4]
-    BranchPiece ---|above| MiddlePiece[B-h3]
-    MiddlePiece ---|above| BottomPiece[B-i1]
+flowchart LR
+    LeftPiece[A-g5] ---|left of| RightPiece[B-a4]
 ```
 
-In this example, the artwork locates the pieces around the brown branch. Their transformed outlines then provide additional evidence that the proposed arrangement is plausible. The physical joins remain the final check.
+![Upper-left example: photographed gap, computed placement overlay, and matching box artwork](assets/upper-left-example.jpg)
+
+Read the three panels from left to right:
+
+1. **Photographed gap:** the input board image shows an empty region surrounded by already assembled pieces.
+2. **Computed overlay:** the actual loose-piece photographs are transformed into their candidate positions. Green lines identify the predicted outlines. This is a visualization, not a photograph of a physically completed assembly.
+3. **Box artwork:** the corresponding reference region provides the image evidence used by the matcher.
+
+The source crops and rotations below the panels let someone identify the physical pieces. The small board overview locates the example in the complete puzzle.
+
+These two specific placements have not been individually confirmed by the owner. They are explanatory candidates chosen for their visible artwork and boundary evidence, rather than a claim of a proven join. The disputed earlier starter group is not used as a success example.
+
+## 14. Photographs and embedded metadata
+
+The repository includes all 23 supplied image files as export copies. Embedded EXIF, XMP, camera/location fields, comments, color-profile metadata, and auxiliary JPEG data are removed. The JPEG primary-image compressed pixels are copied without recompression, and PNG pixels are re-encoded without metadata. The export checks that decoded RGBA pixel arrays match each source exactly.
+
+The local original photographs are untouched. Source filenames are retained for traceability and still contain capture timestamps; removing embedded metadata does not remove information visible in a photograph or encoded in its filename. Removing color profiles or auxiliary HDR data may affect color-managed or HDR display even when the primary decoded pixel values are identical.

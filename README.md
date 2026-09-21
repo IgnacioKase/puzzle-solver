@@ -1,7 +1,15 @@
-# Puzzle solver: how it works
+# Puzzle solver: an illustrated explanation
 
-Read **[the conceptual guide](docs/HOW_IT_WORKS.md)** for an explanation of photo-based jigsaw puzzle matching, with nine Mermaid diagrams.
+Read **[How it works](docs/HOW_IT_WORKS.md)** for the conceptual explanation, nine Mermaid diagrams, and examples built from the actual photographs.
 
-The guide covers piece extraction, binary masks and outlines, perspective correction, color and feature matching, rotation search, gap validation, confidence, computational tradeoffs, and the offline viewer with browser-local progress tracking.
+The document covers piece extraction, masks and outlines, perspective correction, color and feature matching, rotation search, confidence, and browser-local progress tracking.
 
-This private repository contains documentation only. The implementation, source photographs, and generated placement guide remain in the local project.
+![Upper-left example: photographed gap, computed overlay, and reference artwork](docs/assets/upper-left-example.jpg)
+
+This example shows candidate placements, not a physically confirmed assembly. The earlier five-piece starter group was questioned by the owner and is no longer the featured example. The owner reports successfully placing roughly half of the overall suggestions; individual successful IDs have not been recorded.
+
+## Photographs
+
+The [photo collection](images/README.md) includes all 23 supplied image files, with embedded metadata removed from the uploaded copies. Decoded primary-image pixels were verified unchanged. Filenames retain their original timestamps. The local originals remain untouched.
+
+This private repository contains the documentation, source-photo exports, and explanatory figures. The executable implementation and interactive guide remain in the local project.
