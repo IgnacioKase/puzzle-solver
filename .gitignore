@@ -1,0 +1,22 @@
+# Local dependencies and Python caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.agents/
+.codex/
+
+# Regenerable bundles and exploratory debug outputs
+output/*.zip
+output/*.log
+output/dense-test.json
+output/dense-preview.jpg
+output/18*.jpg
+
+# Editor and OS metadata
+.DS_Store
+Thumbs.db

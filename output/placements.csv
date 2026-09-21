@@ -1,0 +1,148 @@
+id,confidence,x_percent_from_left,y_percent_from_top,clockwise_degrees,region,possible_neighbors,artwork_similarity
+A-a1,high,86.1,30.9,340,Gold area right of head,A-a5 left; A-b6 below; A-h4 below-left; A-i2 above; B-b1 right,0.97
+A-a2,high,84.8,58.3,162,Waist / blue branch area,A-c7 above-left; A-f6 left; B-d8 below-right,0.962
+A-a3,medium,92.7,2.9,164,Top-right blossom gap,A-b2 below,0.868
+A-a4,medium,75.7,33.9,38,Large middle-right gap,A-a5 above-right; A-h4 right; C-b1 below,0.839
+A-a5,high,81.5,30.9,142,Gold area right of head,A-a1 right; A-a4 below-left; A-h4 below,0.979
+A-a6,high,95.5,43.2,164,Large middle-right gap,A-b5 below; B-c5 above; B-f1 below-left; B-g1 left,0.953
+A-a7,unresolved,,,,,,0.654
+A-b1,high,90.7,40.0,236,Large middle-right gap,A-d7 below-left; B-c5 right; B-g1 below; B-i4 above; C-a1 above-left,0.963
+A-b2,high,93.7,5.8,26,Top-right blossom gap,A-a3 above; B-d1 left; B-d6 right,0.98
+A-b3,high,86.0,48.3,348,Large middle-right gap,A-e6 below; A-g1 left; B-f5 below-right; B-g6 right; B-g8 above,0.979
+A-b4,high,72.0,74.2,266,Large lower-right gap,A-e7 below,0.959
+A-b5,high,95.7,46.1,252,Large middle-right gap,A-a6 above; B-f1 left; C-a5 below,0.925
+A-b6,high,86.2,33.4,188,Large middle-right gap,A-a1 above; A-h4 left; A-h6 below; B-b1 right; B-i4 right,0.982
+A-b7,high,71.4,42.3,348,Large middle-right gap,A-d4 right; A-d5 left; A-h2 above-right; B-d2 below-right; C-b4 below,0.957
+A-c1,high,13.6,44.2,52,Left of green sleeve,A-d2 left; A-j3 below; B-b5 below,0.965
+A-c2,high,97.0,57.3,0,Waist / blue branch area,,0.947
+A-c3,high,78.9,38.7,344,Large middle-right gap,A-h2 left; A-i1 right; A-i5 above-right; B-b2 below; C-b1 above-left,0.956
+A-c4,high,67.7,48.8,246,Large middle-right gap,B-e5 left; B-h3 right; C-b3 above-left; C-b4 above-right,0.923
+A-c5,medium,72.1,22.6,120,Gold area right of head,B-b8 above; B-c3 below-right; B-c8 right,0.834
+A-c6,high,9.9,27.5,260,Left of raised sleeve,A-j5 below; B-a7 left; B-g2 below-right; B-i5 above,0.975
+A-c7,high,79.8,54.9,62,Large middle-right gap,A-a2 below-right; A-f6 below; A-h5 above; C-a4 above,0.954
+A-d1,high,89.5,72.7,158,Large lower-right gap,B-a1 below-left; C-a3 below,0.946
+A-d2,high,9.1,45.0,258,Left of green sleeve,A-c1 right; B-b5 below; B-c1 below-left,0.984
+A-d3,high,79.2,43.2,274,Large middle-right gap,A-d4 left; A-h2 above; B-b2 above; B-b6 below; B-d2 left; B-d4 right; B-e1 below,0.972
+A-d4,medium,75.5,42.2,8,Large middle-right gap,A-b7 left; A-d3 right; A-h2 above; B-d2 below,0.83
+A-d5,high,66.4,42.9,268,Large middle-right gap,A-b7 right; B-i6 above-left; C-b3 below-left; C-b4 below-right,0.934
+A-d6,high,93.6,75.5,330,Large lower-right gap,A-e1 below-right; C-a3 left,0.906
+A-d7,high,87.3,41.9,58,Large middle-right gap,A-b1 above-right; B-d4 left; B-g1 below-right; B-g8 below; C-a1 above,0.949
+A-e1,high,96.0,77.0,256,Large lower-right gap,A-d6 above-left,0.905
+A-e2,medium,77.6,17.8,182,Gold area right of head,A-f7 above; B-b8 below-left; B-f6 below-right; B-g7 left,0.892
+A-e3,unresolved,,,,,,0.562
+A-e4,unresolved,,,,,,0.577
+A-e5,medium,14.5,73.4,84,Lower-left blossoms,A-f1 left,0.805
+A-e6,high,84.8,50.3,116,Large middle-right gap,A-b3 above; A-g1 above; A-j6 left; B-f5 right; C-a4 left,0.945
+A-e7,high,72.4,76.8,162,Large lower-right gap,A-b4 above; B-e2 below; B-g3 right,0.943
+A-f1,medium,10.3,73.2,226,Lower-left blossoms,A-e5 right,0.884
+A-f2,unresolved,,,,,,0.788
+A-f3,unresolved,,,,,,
+A-f4,unresolved,,,,,,0.762
+A-f5,high,22.0,82.0,272,Lower-left blossoms,,0.926
+A-f6,high,81.0,58.4,166,Waist / blue branch area,A-a2 right; A-c7 above,0.914
+A-f7,high,79.7,15.4,212,Top-right blossom gap,A-e2 below; B-g7 left,0.97
+A-g1,high,82.9,47.3,230,Large middle-right gap,A-b3 right; A-e6 below; A-j6 below-left; B-b6 above-left; B-g8 above,0.983
+A-g2,high,11.0,31.9,168,Left of raised sleeve,A-h3 below; A-j5 above; B-a7 above-left; B-c2 below-left; B-g2 right,0.949
+A-g3,unresolved,,,,,,0.64
+A-g4,unresolved,,,,,,0.849
+A-g5,high,6.6,14.9,14,Small top-left blossom gap,B-a4 right,0.959
+A-g6,high,88.7,10.2,168,Top-right blossom gap,B-a5 above; B-d1 above,0.95
+A-g7,high,77.1,78.7,200,Large lower-right gap,B-g3 above; B-h2 right; B-h5 below,0.939
+A-h1,high,89.0,67.9,144,Large lower-right gap,,0.917
+A-h2,high,75.8,39.7,166,Large middle-right gap,A-b7 below-left; A-c3 right; A-d3 below; A-d4 below; B-b2 right; C-b1 above,0.971
+A-h3,high,12.3,33.7,78,Left of raised sleeve,A-g2 above; B-c2 left,0.964
+A-h4,high,82.2,33.6,166,Large middle-right gap,A-a1 above-right; A-a4 left; A-a5 above; A-b6 right; A-h6 right; A-i5 below,0.94
+A-h5,high,77.2,51.8,348,Large middle-right gap,A-c7 below; A-j6 above-right; B-h4 above; B-i1 left; C-a4 right,0.942
+A-h6,high,87.6,35.7,172,Large middle-right gap,A-b6 above; A-h4 left; A-i5 left; B-i4 right; C-a1 below,0.959
+A-h7,high,70.3,53.9,272,Large middle-right gap,B-e8 left,0.923
+A-i1,high,83.0,38.6,4,Large middle-right gap,A-c3 left; A-i5 above; B-b2 below; B-d4 below; C-a1 right,0.962
+A-i2,medium,86.0,28.0,124,Gold area right of head,A-a1 below; A-j4 above,0.896
+A-i3,high,8.1,49.4,236,Left of green sleeve,B-b5 above-right; B-c1 above-left; B-e7 below-left,0.948
+A-i4,high,67.1,78.8,344,Large lower-right gap,B-e6 below-right; B-g4 left; B-h6 below-left,0.931
+A-i5,high,83.0,36.5,226,Large middle-right gap,A-c3 below-left; A-h4 above; A-h6 right; A-i1 below; C-a1 right,0.975
+A-i6,high,81.1,75.2,8,Large lower-right gap,B-a1 right; B-h2 below,0.931
+A-i7,high,93.2,60.0,260,Waist / blue branch area,B-a6 below; B-d8 left,0.947
+A-j1,high,96.8,33.8,104,Large middle-right gap,B-i4 left,0.956
+A-j2,high,88.3,5.9,320,Top-right blossom gap,B-a5 below; B-d1 right,0.973
+A-j3,high,14.3,46.4,90,Left of green sleeve,A-c1 above; B-a2 below; B-b5 left,0.957
+A-j4,high,85.4,24.6,92,Gold area right of head,A-i2 below; C-b2 left,0.902
+A-j5,high,10.2,30.0,240,Left of raised sleeve,A-c6 above; A-g2 below; B-a7 left; B-g2 right,0.98
+A-j6,high,80.4,48.9,96,Large middle-right gap,A-e6 right; A-g1 above-right; A-h5 below-left; B-b6 above; B-e1 above-left; B-h4 left; C-a4 below,0.955
+A-j7,high,12.2,23.8,78,Left of raised sleeve,B-i5 left,0.979
+B-a1,high,85.6,75.4,280,Large lower-right gap,A-d1 above-right; A-i6 left; C-a3 right,0.906
+B-a2,medium,15.3,49.5,156,Left of green sleeve,A-j3 above; B-b5 left,0.889
+B-a3,high,96.5,8.6,94,Top-right blossom gap,B-d6 above,0.979
+B-a4,high,9.8,14.4,354,Small top-left blossom gap,A-g5 left,0.98
+B-a5,high,87.8,7.9,268,Top-right blossom gap,A-g6 below; A-j2 above; B-d1 above-right,0.954
+B-a6,high,92.1,62.8,4,Waist / blue branch area,A-i7 above; B-d8 above-left,0.932
+B-a7,high,5.8,28.6,86,Left of raised sleeve,A-c6 right; A-g2 below-right; A-j5 right; B-b4 above; B-c2 below; B-f8 above-left; B-i5 above,0.965
+B-b1,high,91.1,31.3,260,Gold area right of head,A-a1 left; A-b6 left; B-i4 below,0.972
+B-b2,high,80.7,41.6,252,Large middle-right gap,A-c3 above; A-d3 below; A-h2 left; A-i1 above; B-d4 right,0.975
+B-b3,unresolved,,,,,,0.704
+B-b4,high,5.6,23.9,354,Left of raised sleeve,B-a7 below; B-f8 below-left; B-i5 right,0.982
+B-b5,high,10.6,47.5,348,Left of green sleeve,A-c1 above; A-d2 above; A-i3 below-left; A-j3 right; B-a2 right; B-c1 left,0.951
+B-b6,high,80.5,45.7,256,Large middle-right gap,A-d3 above; A-g1 below-right; A-j6 below; B-d4 above; B-e1 left; B-g8 right,0.957
+B-b7,high,31.3,27.1,210,Left of raised sleeve,,0.958
+B-b8,high,73.2,20.3,94,Gold area right of head,A-c5 below; A-e2 above-right; B-c8 right; B-d7 above; B-f6 right; B-g7 above,0.946
+B-c1,high,5.8,47.8,356,Left of green sleeve,A-d2 above-right; A-i3 below-right; B-b5 right,0.919
+B-c2,high,8.1,33.9,168,Left of raised sleeve,A-g2 above-right; A-h3 right; B-a7 above; B-d5 left,0.971
+B-c3,high,75.4,24.5,138,Gold area right of head,A-c5 above-left; B-c8 above-right,0.979
+B-c4,high,11.6,52.7,72,Left of green sleeve,B-e7 left; B-g5 left,0.91
+B-c5,medium,95.1,39.4,76,Large middle-right gap,A-a6 below; A-b1 left,0.881
+B-c6,high,53.4,74.1,340,Large lower-right gap,,0.965
+B-c7,high,61.0,50.2,262,Large middle-right gap,B-e5 right,0.984
+B-c8,high,77.6,22.3,14,Gold area right of head,A-c5 left; B-b8 left; B-c3 below-left; B-f6 above; C-b2 right,0.963
+B-d1,high,91.0,6.3,168,Top-right blossom gap,A-b2 right; A-g6 below; A-j2 left; B-a5 below-left,0.965
+B-d2,high,75.7,44.3,70,Large middle-right gap,A-b7 above-left; A-d3 right; A-d4 above; B-e1 below; B-h3 below-left; C-b4 left,0.985
+B-d3,unresolved,,,,,,0.756
+B-d4,medium,84.1,41.7,356,Large middle-right gap,A-d3 left; A-d7 right; A-i1 above; B-b2 left; B-b6 below; B-g8 below; C-a1 above-right,0.821
+B-d5,high,4.4,34.2,256,Left of raised sleeve,B-c2 right,0.932
+B-d6,high,96.7,5.9,8,Top-right blossom gap,A-b2 left; B-a3 below,0.975
+B-d7,high,71.6,17.0,4,Gold area right of head,B-b8 below; B-g7 right,0.99
+B-d8,high,88.0,60.6,82,Waist / blue branch area,A-a2 above-left; A-i7 right; B-a6 below-right,0.969
+B-e1,high,76.9,46.7,354,Large middle-right gap,A-d3 above; A-j6 below-right; B-b6 right; B-d2 above; B-h3 left; B-h4 below; B-i1 below-left,0.974
+B-e2,medium,72.5,79.8,268,Large lower-right gap,A-e7 above; B-e6 left; B-g3 above-right; B-h5 right,0.831
+B-e3,unresolved,,,,,,0.585
+B-e4,unresolved,,,,,,0.647
+B-e5,medium,64.4,49.4,336,Large middle-right gap,A-c4 right; B-c7 left; C-b3 above,0.866
+B-e6,medium,69.1,80.0,264,Large lower-right gap,A-i4 above-left; B-e2 right; B-f7 below; B-h6 left,0.883
+B-e7,high,6.0,51.3,248,Left of green sleeve,A-i3 above-right; B-c4 right; B-g5 below,0.943
+B-e8,high,66.4,53.4,202,Large middle-right gap,A-h7 right,0.924
+B-f1,high,92.3,46.5,90,Large middle-right gap,A-a6 above-right; A-b5 right; B-g1 above; B-g6 left; C-a5 below,0.955
+B-f2,unresolved,,,,,,0.498
+B-f3,unresolved,,,,,,0.589
+B-f4,unresolved,,,,,,0.676
+B-f5,medium,89.4,50.0,80,Large middle-right gap,A-b3 above-left; A-e6 left; B-g6 above; C-a5 right,0.821
+B-f6,high,79.9,19.5,250,Gold area right of head,A-e2 above-left; B-b8 left; B-c8 below; C-b2 below,0.974
+B-f7,high,69.4,83.0,172,Large lower-right gap,B-e6 above,0.905
+B-f8,high,2.9,26.2,6,Left of raised sleeve,B-a7 below-right; B-b4 above-right,0.984
+B-g1,high,91.0,44.0,334,Large middle-right gap,A-a6 right; A-b1 above; A-d7 above-left; B-f1 below,0.975
+B-g2,high,15.2,30.5,168,Left of raised sleeve,A-c6 above-left; A-g2 left; A-j5 left,0.981
+B-g3,high,75.4,76.9,28,Large lower-right gap,A-e7 left; A-g7 below; B-e2 below-left; B-h2 right; B-h5 below,0.91
+B-g4,high,63.6,77.3,142,Large lower-right gap,A-i4 right; B-h6 below,0.926
+B-g5,high,7.6,53.3,350,Left of green sleeve,B-c4 right; B-e7 above,0.962
+B-g6,high,89.1,47.7,168,Large middle-right gap,A-b3 left; B-f1 right; B-f5 below; C-a5 right,0.973
+B-g7,high,74.5,17.1,188,Gold area right of head,A-e2 right; A-f7 right; B-b8 below; B-d7 left,0.981
+B-g8,high,84.5,45.0,342,Large middle-right gap,A-b3 below; A-d7 above; A-g1 below; B-b6 left; B-d4 above,0.932
+B-h1,unresolved,,,,,,0.776
+B-h2,medium,79.1,78.4,188,Large lower-right gap,A-g7 left; A-i6 above; B-g3 left; B-h5 below-left,0.881
+B-h3,high,72.4,47.6,190,Large middle-right gap,A-c4 left; B-d2 above-right; B-e1 right; B-i1 below; C-b4 above,0.974
+B-h4,high,77.1,49.1,126,Large middle-right gap,A-h5 below; A-j6 right; B-e1 above; B-i1 left,0.932
+B-h5,high,75.7,80.7,346,Large lower-right gap,A-g7 above; B-e2 left; B-g3 above; B-h2 above-right,0.934
+B-h6,high,64.7,80.1,218,Large lower-right gap,A-i4 above-right; B-e6 right; B-g4 above,0.943
+B-i1,high,72.9,49.8,220,Large middle-right gap,A-h5 right; B-e1 above-right; B-h3 above; B-h4 right,0.952
+B-i3,unresolved,,,,,,0.685
+B-i4,high,91.9,34.6,172,Large middle-right gap,A-b1 below; A-b6 left; A-h6 left; A-j1 right; B-b1 above; C-a1 below-left,0.933
+B-i5,high,8.5,24.5,208,Left of raised sleeve,A-c6 below; A-j7 right; B-a7 below; B-b4 left,0.967
+B-i6,high,62.5,40.8,174,Large middle-right gap,A-d5 below-right; C-b3 below,0.974
+B-i7,medium,57.0,65.7,114,Large lower-right gap,,0.895
+C-a1,high,87.9,38.4,240,Large middle-right gap,A-b1 below-right; A-d7 below; A-h6 above; A-i1 left; A-i5 left; B-d4 below-left; B-i4 above-right,0.968
+C-a2,unresolved,,,,,,0.609
+C-a3,medium,89.9,74.8,350,Large lower-right gap,A-d1 above; A-d6 right; B-a1 left,0.898
+C-a4,high,80.9,51.0,250,Large middle-right gap,A-c7 below; A-e6 right; A-h5 left; A-j6 above,0.914
+C-a5,medium,95.4,50.0,86,Large middle-right gap,A-b5 above; B-f1 above; B-f5 left; B-g6 left,0.887
+C-b1,high,75.0,36.6,254,Large middle-right gap,A-a4 above; A-c3 below-right; A-h2 below,0.982
+C-b2,high,81.0,22.7,354,Gold area right of head,A-j4 right; B-c8 left; B-f6 above,0.97
+C-b3,high,62.9,45.4,342,Large middle-right gap,A-c4 below-right; A-d5 above-right; B-e5 below; B-i6 above,0.928
+C-b4,high,71.2,45.2,356,Large middle-right gap,A-b7 above; A-c4 below-left; A-d5 above-left; B-d2 right; B-h3 below,0.933
+C-b5,unresolved,,,,,,0.769
