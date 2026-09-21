@@ -1,0 +1,33 @@
+# Third-party content
+
+The MIT license in `LICENSE` covers the original work in this repository: the
+Python analysis scripts in `scripts/`, the interactive guide in `output/index.html`,
+the written documentation, and the photographs taken by the repository author.
+
+It does **not** cover the puzzle artwork.
+
+## Puzzle artwork
+
+The artwork reproduced throughout this repository is "Syungetsu" by Haruyo Morita,
+published as a 1000-piece jigsaw puzzle by EuroGraphics. It is the copyright of its
+respective rights holders and is **not** licensed under the terms in `LICENSE`.
+
+That artwork appears here only as the subject of a personal, non-commercial
+image-analysis experiment. It is present as:
+
+- photographs of the puzzle box and the partially assembled puzzle, in `images/`
+- rectified reference renderings, in `output/reference.jpg` and
+  `output/reference-clean.jpg`
+- extracted piece crops and placement overlays, in `output/pieces/`,
+  `output/previews/`, and the annotated maps in `output/`
+- illustrative figures in `docs/assets/`
+
+No claim of ownership is made over that artwork, and no endorsement by
+EuroGraphics or the artist is implied. If you are a rights holder and would like
+this material removed, please open an issue.
+
+## Dependencies
+
+The analysis depends on NumPy, OpenCV, SciPy, and Pillow, each distributed under
+its own license. None of those projects are vendored into this repository; see
+`requirements.txt`.

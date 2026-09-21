@@ -2,7 +2,7 @@
 
 These 23 images show the loose pieces, the original puzzle state, close-ups, and box references used for the analysis.
 
-The copies uploaded to GitHub have embedded metadata removed. Their primary decoded pixels were verified against the local originals. JPEG primary-image data was preserved without recompression. The original filenames remain for traceability and contain capture timestamps. Local originals are unchanged.
+The images in this folder have had all embedded metadata removed, including the camera EXIF and GPS tags written by the phone. Their decoded pixels were verified byte-for-byte against the unmodified originals, and the JPEG primary-image data was preserved without recompression, so the analysis is unaffected. Descriptive filenames identify each photograph's role without including capture timestamps.
 
 [Read the illustrated explanation](../docs/HOW_IT_WORKS.md).
 

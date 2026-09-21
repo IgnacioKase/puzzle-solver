@@ -10,6 +10,10 @@ This example shows candidate placements, not a physically confirmed assembly. Th
 
 ## Photographs
 
-The [photo collection](images/README.md) includes all 23 supplied image files, with embedded metadata removed from the uploaded copies. Decoded primary-image pixels were verified unchanged. Filenames retain their original timestamps. The local originals remain untouched.
+The [photo collection](images/README.md) includes all 23 supplied image files, with embedded metadata removed from the uploaded copies. Decoded primary-image pixels were verified unchanged. Descriptive filenames contain no capture timestamps. The local originals remain untouched.
 
 This private repository contains the documentation, source-photo exports, and explanatory figures. The executable implementation and interactive guide remain in the local project.
+
+## License
+
+The original documentation and the author's photographs are covered by the [MIT License](LICENSE). The puzzle artwork is excluded; see [NOTICE](NOTICE).
