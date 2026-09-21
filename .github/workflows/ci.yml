@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+# A new push to the same branch makes the previous run irrelevant.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Ruff and shell checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # The hook is the single source of truth for the version, so CI and a
+      # local commit can never format the same file differently.
+      - name: Install the Ruff version pinned by the pre-commit hook
+        run: |
+          version=$(sed -n 's/^RUFF_VERSION=//p' .githooks/pre-commit)
+          echo "Pinned Ruff version: $version"
+          python -m pip install "ruff==$version"
+
+      - name: Check formatting
+        run: ruff format --check --diff .
+
+      - name: Check lints
+        run: ruff check .
+
+      # The hook is executable code with its own tests; lint it like any other.
+      - name: Check the pre-commit hook
+        run: shellcheck .githooks/pre-commit
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      # illustrate.py loads DejaVu Sans by absolute path. The runner image
+      # normally ships it; install it only if a future image drops it.
+      - name: Ensure the DejaVu font is present
+        run: |
+          if [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf ]; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends fonts-dejavu-core
+          fi
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      # Plain unittest, so no test dependency beyond requirements.txt.
+      - name: Run tests
+        run: python -m unittest discover -s tests -v

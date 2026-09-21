@@ -1,0 +1,33 @@
+# Formatting and linting for the scripts in this repo.
+# Applied automatically by .githooks/pre-commit; run by hand with:
+#   uv tool run ruff@0.16.8 format .
+#   uv tool run ruff@0.16.8 check --fix .
+
+target-version = "py313"
+
+# Wider than the 88-column default: the image pipelines carry long coordinate
+# literals and OpenCV calls that stay more readable on one line.
+line-length = 100
+
+[lint]
+select = [
+    "E4",   # imports
+    "E7",   # statement-level style
+    "E9",   # syntax and IO errors
+    "F",    # pyflakes: undefined names, unused imports and variables
+    "I",    # import sorting
+    "UP",   # outdated syntax for the target Python
+    "B",    # likely bugs (bugbear)
+    "C4",   # comprehension and collection-call cleanups
+    "RUF",  # ruff's own checks
+]
+
+ignore = [
+    # RUF005 rewrites `a + b` into `[*a, b]`, which is right for lists and wrong
+    # for the numpy arrays used throughout these scripts: there `+` is
+    # element-wise addition, not concatenation, so the rewrite changes results.
+    "RUF005",
+]
+
+[format]
+docstring-code-format = true

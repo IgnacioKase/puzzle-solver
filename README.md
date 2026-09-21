@@ -62,6 +62,64 @@ Then run the analysis:
 
 The photo corner coordinates and contact-separation cuts are specific to these photos. New photos require recalibration. The scripts only read from `images/` and never modify those files. The analysis runs locally; it does not call an image-generation service or paid model API.
 
+## Tests
+
+After installing `requirements.txt`, run the basic regression suite:
+
+```sh
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+The suite uses Python's built-in `unittest`; no additional Python dependencies
+are needed. It checks perspective and rotation geometry, synthetic artwork
+matching and refinement, guide exports, neighbors and overlaps, documentation
+illustrations, metadata removal, and the pre-commit hook. Fixtures and script
+outputs live in temporary directories, leaving your photos and guide untouched.
+It does not rerun the complete puzzle analysis or measure physical placement
+accuracy. The hook tests require Git and Bash 4.4+; illustration generation uses
+the same DejaVu Sans font as the scripts (`fonts-dejavu-core` on Debian/Ubuntu).
+
+## Code formatting
+
+Python files are formatted and linted with [ruff](https://docs.astral.sh/ruff/),
+configured in `ruff.toml`. A pre-commit hook applies it to staged files
+automatically; enable it once per clone:
+
+```sh
+git config core.hooksPath .githooks
+```
+
+The hook fetches a pinned ruff through [uv](https://docs.astral.sh/uv/), so no
+extra entry in `requirements.txt` is needed. It reformats staged files and
+restages them, and stops the commit only when a finding needs a human decision.
+Skip it for a single commit with `git commit --no-verify`.
+Without uv, the hook accepts an installed Ruff only if it matches the pinned version.
+
+Renamed Python files are checked too. Files with both staged and unstaged
+changes stop the hook before formatting, to preserve partial staging. Commits
+without staged Python changes do not require Ruff. The hook runs formatting and
+linting; run the test command above separately.
+
+To run the same checks by hand:
+
+```sh
+uv tool run ruff@0.16.8 format .
+uv tool run ruff@0.16.8 check --fix .
+```
+
+## Continuous integration
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every push to
+`main` and on every pull request, in two parallel jobs:
+
+- **Ruff and shell checks**: `ruff format --check` and `ruff check` over the
+  repository, plus ShellCheck on the pre-commit hook.
+- **Tests**: installs `requirements.txt` on Python 3.13 and runs the suite.
+
+CI installs the Ruff version read straight out of `.githooks/pre-commit`, so a
+local commit and a CI run can never disagree about formatting. Nothing in the
+workflow needs repository secrets or write permissions.
+
 ## License
 
 The code, documentation, and the author's photographs are released under the
