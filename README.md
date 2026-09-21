@@ -2,6 +2,10 @@
 
 For the conceptual explanation, algorithms, and system diagrams, read **[How it works](docs/HOW_IT_WORKS.md)**.
 
+[![Placement example showing the photographed gap, the software's proposed piece overlay, and the matching box artwork](docs/assets/upper-left-example.jpg)](docs/HOW_IT_WORKS.md)
+
+*How the software checks a placement: compare the photographed gap, the proposed overlay, and the box artwork. These example placements are suggestions, not individually confirmed fits.*
+
 Open **[output/index.html](output/index.html)** in a browser. It runs offline without installing anything. Start with the high-confidence entries. Click a piece, locate it on the annotated source sheet, and compare its placement preview before trying the fit.
 
 To track assembly, select a piece and tick **I've placed this piece**. Uncheck it to undo. Completed pieces get checkmarks in the list and on the map; **Hide placed pieces** removes them from both. Your count updates automatically, and progress survives refreshes in the same browser at the same address (for example, `http://localhost:8001`). Progress is stored in that browser, not synced between devices or included in the downloadable ZIP.
