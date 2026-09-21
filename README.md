@@ -8,7 +8,9 @@ To track assembly, select a piece and tick **I've placed this piece**. Uncheck i
 
 The result contains **109 high-confidence suggestions (74% of 147 entries)**, **19 tentative suggestions**, and **19 unresolved entries**. These are image-based suggestions, not physically verified placements.
 
-For a first concrete assembly, open **[the five-piece starter diagram](output/start-here.jpg)**. In the large middle-right gap, try `A-d5` to the left of `A-b7`, then `C-b4` below `A-b7`, `B-h3` below `C-b4`, and `B-i1` below `B-h3`. The diagram shows the source pieces and rotations. Another easy starting point is `B-a4`, in the small isolated top-left gap at roughly 10% across and 14% down, nearly upright.
+For a visual explanation, open **[the upper-left example](output/start-here.jpg)**, showing the candidates `A-g5` and `B-a4` against a small photographed gap and the box artwork. These specific placements have not been individually confirmed. The previous five-piece starter group was questioned during physical assembly and has been withdrawn as the featured recommendation.
+
+The owner reports successfully placing roughly half of the suggested pieces. Exact confirmed IDs are not recorded here, so the original confidence totals above remain algorithm-generated labels rather than measured accuracy.
 
 - **A** is the first large sheet, photographed in `sheet-a-main.jpg`.
 - **B** is the second large sheet, photographed in `sheet-b-main.jpg`.
@@ -58,4 +60,11 @@ Then run the analysis:
 .venv/bin/python scripts/starter.py
 ```
 
-The photo corner coordinates and contact-separation cuts are specific to these photos. New photos require recalibration. Originals in `images/` are never modified. The analysis runs locally; it does not call an image-generation service or paid model API.
+The photo corner coordinates and contact-separation cuts are specific to these photos. New photos require recalibration. The scripts only read from `images/` and never modify those files. The analysis runs locally; it does not call an image-generation service or paid model API.
+
+## License
+
+The code, documentation, and the author's photographs are released under the
+[MIT License](LICENSE). The puzzle artwork reproduced in `images/`, `output/`, and
+`docs/` is third-party copyright and is **not** covered by that license — see
+[NOTICE](NOTICE).
